@@ -1,11 +1,11 @@
 {
-	"name": "@codeeditorland/vscode",
-	"displayName": "Tauri",
-	"description": "Enhances the experience of Tauri apps development",
-	"main": "./dist/extension.js",
-	"scripts": {
-		"compile": "tsup src/extension.ts --clean --format cjs --external vscode"
-	},
+	"activationEvents": [
+		"workspaceContains:**/tauri.conf.json",
+		"workspaceContains:**/tauri.*.conf.json",
+		"workspaceContains:**/tauri.conf.json5",
+		"workspaceContains:**/tauri.*.conf.json5",
+		"onFileSystem:tauri"
+	],
 	"contributes": {
 		"commands": [
 			{
@@ -47,14 +47,8 @@
 			}
 		]
 	},
-	"activationEvents": [
-		"workspaceContains:**/tauri.conf.json",
-		"workspaceContains:**/tauri.*.conf.json",
-		"workspaceContains:**/tauri.conf.json5",
-		"workspaceContains:**/tauri.*.conf.json5",
-		"onFileSystem:tauri"
-	],
 	"dependencies": {},
+	"description": "Enhances the experience of Tauri apps development",
 	"devDependencies": {
 		"@types/node": "22.13.10",
 		"axios": "1.8.4",
@@ -63,5 +57,11 @@
 		"strip-ansi": "7.1.0",
 		"tsup": "8.4.0"
 	},
-	"icon": "assets/icon.png"
+	"displayName": "Tauri",
+	"icon": "assets/icon.png",
+	"main": "./dist/extension.js",
+	"name": "@codeeditorland/vscode",
+	"scripts": {
+		"compile": "tsup src/extension.ts --clean --format cjs --external vscode"
+	}
 }
