@@ -80,7 +80,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@playform/build": "0.2.3",
-		"@types/node": "22.15.2",
+		"@types/node": "22.15.3",
 		"axios": "1.9.0",
 		"glob": "11.0.2",
 		"run-in-terminal": "0.0.3",
