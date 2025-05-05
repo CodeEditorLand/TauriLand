@@ -1,33 +1,18 @@
 {
-	"name": "@codeeditorland/vscode",
-	"displayName": "Tauri",
-	"version": "0.0.1",
-	"private": false,
-	"description": "Enhances the experience of Tauri apps development",
-	"keywords": [
-		"codeeditorland",
-		"land",
-		"playform"
+	"activationEvents": [
+		"workspaceContains:**/tauri.conf.json",
+		"workspaceContains:**/tauri.*.conf.json",
+		"workspaceContains:**/tauri.conf.json5",
+		"workspaceContains:**/tauri.*.conf.json5",
+		"onFileSystem:tauri"
 	],
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriLand#readme",
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/TauriLand/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/TauriLand.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Source 🖋️ Open 👐🏻",
 		"email": "Source/Open@Editor.Land",
+		"name": "Source 🖋️ Open 👐🏻",
 		"url": "HTTPS://Editor.Land"
 	},
-	"type": "module",
-	"main": "./dist/extension.js",
-	"scripts": {
-		"compile": "tsup src/extension.ts --clean --format cjs --external vscode",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/TauriLand/issues"
 	},
 	"contributes": {
 		"commands": [
@@ -70,14 +55,8 @@
 			}
 		]
 	},
-	"activationEvents": [
-		"workspaceContains:**/tauri.conf.json",
-		"workspaceContains:**/tauri.*.conf.json",
-		"workspaceContains:**/tauri.conf.json5",
-		"workspaceContains:**/tauri.*.conf.json5",
-		"onFileSystem:tauri"
-	],
 	"dependencies": {},
+	"description": "Enhances the experience of Tauri apps development",
 	"devDependencies": {
 		"@playform/build": "0.2.3",
 		"@types/node": "18.19.48",
@@ -87,8 +66,29 @@
 		"strip-ansi": "7.1.0",
 		"tsup": "^8.2.4"
 	},
+	"displayName": "Tauri",
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriLand#readme",
+	"icon": "assets/icon.png",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "./dist/extension.js",
+	"name": "@codeeditorland/vscode",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
 	},
-	"icon": "assets/icon.png"
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TauriLand.git"
+	},
+	"scripts": {
+		"compile": "tsup src/extension.ts --clean --format cjs --external vscode",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"type": "module",
+	"version": "0.0.1"
 }
