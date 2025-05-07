@@ -58,7 +58,7 @@
 	"dependencies": {},
 	"description": "Enhances the experience of Tauri apps development",
 	"devDependencies": {
-		"@playform/build": "0.2.3",
+		"@playform/build": "0.2.4",
 		"@types/node": "18.19.48",
 		"axios": "1.7.7",
 		"glob": "11.0.0",
